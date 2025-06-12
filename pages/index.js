@@ -35,6 +35,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://meeting-or-email.vercel.app/" />
 
+        <meta name="google-site-verification" content="XAqCqCjJTu-rkYuUL4ymDYtjRRT9H2KETYHctkPWXVg" />
+            
         {/* Social sharing tags (optional but helpful) */}
         <meta property="og:title" content="Meeting or Email? Smart AI Tool" />
         <meta
