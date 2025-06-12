@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from "next/head"; // 👈 Step 1: import Head
+import Head from "next/head";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -24,7 +24,6 @@ export default function Home() {
 
   return (
     <>
-      {/* 👇 Step 2: Add SEO metadata */}
       <Head>
         <title>Meeting or Email? Smart AI Recommendation</title>
         <meta
@@ -34,24 +33,17 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://meeting-or-email.vercel.app/" />
-
         <meta name="google-site-verification" content="XAqCqCjJTu-rkYuUL4ymDYtjRRT9H2KETYHctkPWXVg" />
-            
-        {/* Social sharing tags (optional but helpful) */}
         <meta property="og:title" content="Meeting or Email? Smart AI Tool" />
         <meta
           property="og:description"
           content="Describe your message and get an instant recommendation from AI — should it be a meeting or an email?"
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://meeting-or-email.vercel.app/"
-        />
+        <meta property="og:url" content="https://meeting-or-email.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* 👇 Your existing UI */}
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="w-full max-w-3xl bg-white shadow-lg rounded-xl p-8">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
@@ -88,17 +80,18 @@ export default function Home() {
               {result}
             </div>
           )}
-{/* 👇 Always-visible contact section */}
-        <div className="mt-12 text-center text-sm text-gray-500">
-          Need help? <a href="#contact" className="text-blue-600 hover:underline">Contact Us</a>
-        </div>
 
-        <div id="contact" className="mt-6 p-4 bg-gray-100 rounded-lg text-left">
-          <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
-          <p>Email: <a href="mailto:theminimalistmethods@gmail.com" className="text-blue-600">theminimalistmethods@gmail.com</a></p>
+          {/* 👇 Always-visible contact section */}
+          <div className="mt-12 text-center text-sm text-gray-500">
+            Need help? <a href="#contact" className="text-blue-600 hover:underline">Contact Us</a>
+          </div>
+
+          <div id="contact" className="mt-6 p-4 bg-gray-100 rounded-lg text-left">
+            <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
+            <p>Email: <a href="mailto:theminimalistmethods@gmail.com" className="text-blue-600">theminimalistmethods@gmail.com</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </>
-); //
-} //
+    </>
+  );
+}
