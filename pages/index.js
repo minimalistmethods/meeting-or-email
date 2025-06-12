@@ -44,7 +44,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
         <div className="w-full max-w-3xl bg-white shadow-lg rounded-xl p-8">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
             Should this be an Email or a Meeting?
@@ -81,17 +81,33 @@ export default function Home() {
             </div>
           )}
 
-          {/* 👇 Always-visible contact section */}
           <div className="mt-12 text-center text-sm text-gray-500">
-            Need help? <a href="#contact" className="text-blue-600 hover:underline">Contact Us</a>
-          </div>
-
-          <div id="contact" className="mt-6 p-4 bg-gray-100 rounded-lg text-left">
-            <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
-            <p>Email: <a href="mailto:theminimalistmethods@gmail.com" className="text-blue-600">theminimalistmethods@gmail.com</a></p>
+            Need help?{" "}
+            <a href="#contact" className="text-blue-600 hover:underline">
+              Contact Us
+            </a>
           </div>
         </div>
-      </div>
+      </main>
+
+      {/* 👇 Moved outside of main content */}
+      <section
+        id="contact"
+        className="bg-gray-100 py-8 px-4 text-left border-t border-gray-200"
+      >
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:theminimalistmethods@gmail.com"
+              className="text-blue-600 hover:underline"
+            >
+              theminimalistmethods@gmail.com
+            </a>
+          </p>
+        </div>
+      </section>
     </>
   );
 }
