@@ -88,8 +88,16 @@ export default function Home() {
               {result}
             </div>
           )}
+{/* 👇 Always-visible contact section */}
+        <div className="mt-12 text-center text-sm text-gray-500">
+          Need help? <a href="#contact" className="text-blue-600 hover:underline">Contact Us</a>
+        </div>
+
+        <div id="contact" className="mt-6 p-4 bg-gray-100 rounded-lg text-left">
+          <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
+          <p>Email: <a href="mailto:theminimalistmethods@gmail.com" className="text-blue-600">theminimalistmethods@gmail.com</a></p>
         </div>
       </div>
-    </>
-  );
-}
+    </div>
+  </>
+);
